@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: row; /* Change to row for side-by-side layout */
+}
+
+.controls {
+    width: 25%; /* Set width for controls */
+    padding: 10px;
+    background-color: #ecf0f1;
+}
+
+.track-controls {
+    margin-bottom: 20px;
+}
+
+.progress {
+    width: 75%; /* Remaining space for progress bar */
+    padding: 10px;
+}
+
+.progress input[type="range"] {
+    width: 100%;
+}
+
+.effects {
+    padding: 10px;
+}
+
+footer {
+    background-color: #ecf0f1;
+    padding: 10px;
+    text-align: center;
+}
+
+canvas {
+    border: 1px solid #ccc; /* Optional: Add border to waveforms */
+}

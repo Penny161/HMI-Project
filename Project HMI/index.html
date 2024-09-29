@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Audio Editor</h1>
+    </header>
+    <div class="container">
+        <div class="controls">
+            <div class="track-controls">
+                <h3>Track 1 Controls</h3>
+                <button class="play" data-audio="audio1">Play</button>
+                <button class="pause" data-audio="audio1">Pause</button>
+                <button class="stop" data-audio="audio1">Stop</button>
+                <label>Volume: <input type="range" class="volume" data-audio="audio1" min="0" max="100" value="100"></label>
+                <canvas id="waveform1" width="600" height="100"></canvas>
+                <audio id="audio1" src="Drums.wav"></audio>
+            </div>
+            <div class="track-controls">
+                <h3>Track 2 Controls</h3>
+                <button class="play" data-audio="audio2">Play</button>
+                <button class="pause" data-audio="audio2">Pause</button>
+                <button class="stop" data-audio="audio2">Stop</button>
+                <label>Volume: <input type="range" class="volume" data-audio="audio2" min="0" max="100" value="100"></label>
+                <canvas id="waveform2" width="600" height="100"></canvas>
+                <audio id="audio2" src="Bass.wav"></audio>
+            </div>
+        </div>
+        <div class="progress">
+            <input type="range" id="progressBar" value="0" min="0" max="100" step="0.1">
+        </div>
+        <div class="effects">
+            <h3>Effects</h3>
+            <button class="effect" data-effect="reverb">Add Reverb</button>
+            <button class="effect" data-effect="echo">Add Echo</button>
+            <!-- More effects buttons can be added here -->
+        </div>
+    </div>
+    <footer>
+        <p>Current Time: <span id="currentTime">00:00</span> | Total Time: <span id="totalTime">03:00</span></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
